@@ -1,7 +1,7 @@
 from model import Model
 from view import View
 from PyQt5 import QtCore, QtGui
-from PyQt5.QtWidgets import QApplication, QFileDialog
+from PyQt5.QtWidgets import QApplication, QFileDialog, QMessageBox
 import sys
 
 """ lihat juga file view karena disana ada beberapa element yg di ganti terutama element grafik, 
@@ -47,7 +47,16 @@ class Controller:
 
         if not self.vid.isOpened():
             print("Video tidak bisa dibuka")
-            exit()
+            msg = QMessageBox()
+            msg.setWindowTitle("Error")
+            msg.setText("Video is can't open")
+            msg.setIcon(QMessageBox.Critical)
+            msg.exec_()
+
+            # model = Model()
+            # view = View()
+            # Controller(model, view)
+            self.clear()
 
         self.playing = True
 
