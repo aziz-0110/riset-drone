@@ -5,6 +5,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class View(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
+        self.tableView = pg.TableWidget()
         self.setupUi(self)
 
     def setupUi(self, Form):
@@ -24,7 +25,7 @@ class View(QtWidgets.QWidget):
         self.verticalLayout_7.setSpacing(3)
         self.verticalLayout_7.setObjectName("verticalLayout_7")
         self.frame_3 = QtWidgets.QFrame(self.frame)
-        self.frame_3.setMaximumSize(QtCore.QSize(16777215, 150))
+        self.frame_3.setMaximumSize(QtCore.QSize(16777215, 130))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(True)
@@ -67,7 +68,7 @@ class View(QtWidgets.QWidget):
         self.horizontalLayout_2.addWidget(self.radioButton_norecord)
         self.verticalLayout_2.addWidget(self.frame_10)
         self.frame_9 = QtWidgets.QFrame(self.frame_3)
-        self.frame_9.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.frame_9.setMaximumSize(QtCore.QSize(16777215, 50))
         self.frame_9.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_9.setObjectName("frame_9")
@@ -153,8 +154,8 @@ class View(QtWidgets.QWidget):
         self.pushButton_play.setStyleSheet("")
         self.pushButton_play.setText("")
         icon1 = QtGui.QIcon()
-        # icon1.addPixmap(QtGui.QPixmap("icon/play.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon1.addPixmap(QtGui.QPixmap("icon/pause.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("icon/play.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon1.addPixmap(QtGui.QPixmap("icon/pause.png"), QtGui.QIcon.Disabled, QtGui.QIcon.On)
         self.pushButton_play.setIcon(icon1)
         self.pushButton_play.setObjectName("pushButton_play")
         self.horizontalLayout_10.addWidget(self.pushButton_play)
@@ -320,6 +321,39 @@ class View(QtWidgets.QWidget):
         self.verticalLayout_11.addWidget(self.frame_17)
         self.verticalLayout_9.addWidget(self.frame_18)
         self.verticalLayout_7.addWidget(self.frame_11)
+        self.frame_15 = QtWidgets.QFrame(self.frame)
+        self.frame_15.setFrameShape(QtWidgets.QFrame.Box)
+        self.frame_15.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.frame_15.setMaximumSize(QtCore.QSize(16777215, 180))
+        self.frame_15.setObjectName("frame_15")
+        self.verticalLayout_12 = QtWidgets.QVBoxLayout(self.frame_15)
+        self.verticalLayout_12.setContentsMargins(3, 3, 3, 3)
+        self.verticalLayout_12.setSpacing(3)
+        self.verticalLayout_12.setObjectName("verticalLayout_12")
+        self.label_8 = QtWidgets.QLabel(self.frame_15)
+        self.label_8.setMaximumSize(QtCore.QSize(16777215, 20))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_8.setFont(font)
+        self.label_8.setFrameShape(QtWidgets.QFrame.Box)
+        self.label_8.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.label_8.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_8.setObjectName("label_8")
+        self.verticalLayout_12.addWidget(self.label_8)
+        # self.label_table = QtWidgets.QLabel(self.frame_15)
+        # self.label_table.setText("")
+        # self.label_table.setObjectName("label_table")
+        # self.verticalLayout_12.addWidget(self.label_table)
+        # self.verticalLayout_7.addWidget(self.frame_15)
+
+        self.setupTabel()
+
+        self.verticalLayout_12.addWidget(self.tableView)
+        self.verticalLayout_7.addWidget(self.frame_15)
+
+
         self.frame_4 = QtWidgets.QFrame(self.frame)
         self.frame_4.setFrameShape(QtWidgets.QFrame.Box)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Sunken)
@@ -340,6 +374,11 @@ class View(QtWidgets.QWidget):
         self.label_4.setAlignment(QtCore.Qt.AlignCenter)
         self.label_4.setObjectName("label_4")
         self.verticalLayout_3.addWidget(self.label_4)
+        # self.label_grap = QtWidgets.QLabel(self.frame_4)
+        # self.label_grap.setText("")
+        # self.label_grap.setObjectName("label_grap")
+        # self.verticalLayout_3.addWidget(self.label_grap)
+        # self.verticalLayout_7.addWidget(self.frame_4)
 
         """ menampilkan grafik """
         self.grafView = PlotWidget(Form)
@@ -348,9 +387,10 @@ class View(QtWidgets.QWidget):
         self.grafView.setLabels(left="Percentage", bottom="Frame")
         self.grafView.setObjectName("grafView")
         self.verticalLayout_3.addWidget(self.grafView)
+        self.verticalLayout_7.addWidget(self.frame_4)
         """end"""
 
-        self.verticalLayout_7.addWidget(self.frame_4)
+
         self.horizontalLayout_3.addWidget(self.frame)
         self.frame_2 = QtWidgets.QFrame(Form)
         self.frame_2.setFrameShape(QtWidgets.QFrame.NoFrame)
@@ -424,7 +464,6 @@ class View(QtWidgets.QWidget):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
-
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
@@ -434,7 +473,7 @@ class View(QtWidgets.QWidget):
         self.pushButton_2.setText(_translate("Form", "Load Video"))
         self.pushButton.setText(_translate("Form", "Save"))
         self.pushButton_3.setText(_translate("Form", "Clear"))
-        self.label_3.setText(_translate("Form", "Information"))
+        self.label_3.setText(_translate("Form", "Informations"))
         self.label_informasi_2.setText(_translate("Form", "Name File "))
         self.label_10.setText(_translate("Form", ":"))
         self.label_informasi_6.setText(_translate("Form", "Resolusi"))
@@ -445,11 +484,11 @@ class View(QtWidgets.QWidget):
         self.label_19.setText(_translate("Form", ":"))
         self.label_informasi_8.setText(_translate("Form", "Status"))
         self.label_21.setText(_translate("Form", ":"))
+        self.label_8.setText(_translate("Form", "Table Informations"))
         self.label_4.setText(_translate("Form", "Graph"))
         self.label_7.setText(_translate("Form", "Depth Estimation"))
         self.label_indi_dp.setText(_translate("Form", "Indikator"))
         self.label_5.setText(_translate("Form", "Original"))
-
 
     def update_image(self, frame_ori, hsv):
         height, width, channel = frame_ori.shape
@@ -462,8 +501,37 @@ class View(QtWidgets.QWidget):
         img_hsv = QtGui.QPixmap.fromImage(qimg_hsv)
         self.label_dp.setPixmap(img_hsv.scaled(self.label_dp.size()))
 
+    def setupTabel(self):
+        # self.tableView = pg.TableWidget()
+        header = ['Frame', 'Green', 'Yellow', 'Red']
+        data = [
+            {header[0]: ' ', header[1]: ' ', header[2]: ' ', header[3]: ' '},
+            {header[0]: ' ', header[1]: ' ', header[2]: ' ', header[3]: ' '},
+            {header[0]: ' ', header[1]: ' ', header[2]: ' ', header[3]: ' '},
+        ]
+
+        self.tableView.setData(data)
+        # self.tableView.saveAll()
+
+        self.tableView.verticalHeader().setVisible(False)
+
+        self.tableView.setColumnWidth(0, 87)
+        self.tableView.setColumnWidth(1, 100)
+        self.tableView.setColumnWidth(2, 100)
+        self.tableView.setColumnWidth(3, 100)
+
+        for row in range(self.tableView.rowCount()):
+            for col in range(self.tableView.columnCount()):
+                item = self.tableView.item(row, col)
+                if item:
+                    item.setTextAlignment(QtCore.Qt.AlignCenter)
+
+        # if kondisi == True:
+        #     self.verticalLayout_12.addWidget(self.tableView)
+        #     self.verticalLayout_7.addWidget(self.frame_15)
 
 from pyqtgraph import PlotWidget
+import pyqtgraph as pg
 
 if __name__ == "__main__":
     import sys
