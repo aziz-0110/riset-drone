@@ -3,7 +3,7 @@ Download dataset [here](https://telkomuniversityofficial-my.sharepoint.com/:f:/g
 
 ## Screenshots
 
-![](icon/scro)
+![](icon/screenshot.png)
 
 ## Usage
 1. Clone the repository
