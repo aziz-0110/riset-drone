@@ -48,7 +48,7 @@ class Controller:
         # src = './dataset/dataset-2s.mp4'
         # self.vid = cv2.VideoCapture(src)
 
-        if not self.vid.isOpened():
+        if not self.vid.isOpened()  :
             print("Video tidak bisa dibuka")
             msg = QMessageBox()
             msg.setWindowTitle("Error")
@@ -110,7 +110,8 @@ class Controller:
             if ret:
                 if self.view.radioButton_record.isChecked():
                     self.video_out.write(hsv_vid_out)
-                self.view.update_image(frame_ori, hsv)
+                self.view.update_image(frame_ori, self.view.label_ori)
+                self.view.update_image(hsv, self.view.label_dp)
                 self.t_red.append(float(f"{red:.2f}"))
                 self.t_yellow.append(float(f"{yellow:.2f}"))
                 self.t_green.append(float(f"{green:.2f}"))
@@ -181,7 +182,9 @@ class Controller:
 
         self.view.grafView.clear()
 
-        self.view.tableView.clear()
+        # self.view.tableView.clear()
+        # self.view.tableView.setData(self.view.dataTabel)
+        self.table(1)
 
     def change_icon_play(self, condision):
         src = "icon/play.png" if condision == 1 else "icon/pause.png"
@@ -202,12 +205,14 @@ class Controller:
         self.line_yellow.setData(x_y, self.t_yellow)
         self.line_green.setData(x_g, self.t_green)
 
-    def table(self):
+    def table(self, kondisi=0):
         hd = ['Frame', 'Green', 'Yellow', 'Red']
 
         data = []
-
-        [data.append({hd[0]: i, hd[1]: f"{self.t_green[i]}%", hd[2]: f"{self.t_yellow[i]}%", hd[3]: f"{self.t_red[i]}%"}) for i in range(1, len(self.t_red))]
+        if kondisi == 0:
+            [data.append({hd[0]: i, hd[1]: f"{self.t_green[i]}%", hd[2]: f"{self.t_yellow[i]}%", hd[3]: f"{self.t_red[i]}%"}) for i in range(1, len(self.t_red))]
+        else:
+            data = self.view.dataTabel
 
         # for i in range(len(self.t_red)):
         #     data.append({hd[0]: i, hd[1]: f"{self.t_green[i]}%", hd[2]: f"{self.t_yellow[i]}%", hd[3]: f"{self.t_red[i]}%"})
@@ -217,10 +222,10 @@ class Controller:
 
         self.view.tableView.verticalHeader().setVisible(False)
 
-        self.view.tableView.setColumnWidth(0, 73)
-        self.view.tableView.setColumnWidth(1, 100)
-        self.view.tableView.setColumnWidth(2, 100)
-        self.view.tableView.setColumnWidth(3, 100)
+        self.view.tableView.setColumnWidth(0, 256)
+        self.view.tableView.setColumnWidth(1, 256)
+        self.view.tableView.setColumnWidth(2, 256)
+        self.view.tableView.setColumnWidth(3, 256)
 
         for row in range(self.view.tableView.rowCount()):
             for col in range(self.view.tableView.columnCount()):
@@ -237,7 +242,8 @@ def main():
     Controller(model, view)
 
     view.setWindowTitle('Detection of Grass')
-    view.resize(1280, 720)
+    # view.resize(2650, 1600)
+    view.resize(3500, 1600)
     view.show()
 
     sys.exit(app.exec_())

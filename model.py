@@ -1,4 +1,6 @@
 import numpy as np
+import cv2
+
 
 class Model:
     def __init__(self):
@@ -12,7 +14,6 @@ class Model:
         self.lower_green, self.upper_green = self.limit_color(green)
 
     def color_map(self, src, condision_record, total_px):
-        import cv2
 
         ret, frame = src.read()
         ori, hsv, hsv_vid_out = None, None, None
@@ -46,7 +47,6 @@ class Model:
         return ret, frame, hsv, hsv_vid_out, total_red, total_yellow, total_green
 
     def limit_color(self, color):
-        import cv2
         c = np.uint8([[color]])
 
         hsv = cv2.cvtColor(c, cv2.COLOR_BGR2HSV)

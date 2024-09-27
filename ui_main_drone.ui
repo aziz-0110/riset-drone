@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>720</height>
+    <width>2560</width>
+    <height>1600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,25 +15,25 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_3">
    <property name="spacing">
-    <number>3</number>
+    <number>9</number>
    </property>
    <property name="leftMargin">
-    <number>3</number>
+    <number>9</number>
    </property>
    <property name="topMargin">
-    <number>3</number>
+    <number>9</number>
    </property>
    <property name="rightMargin">
-    <number>3</number>
+    <number>9</number>
    </property>
    <property name="bottomMargin">
-    <number>3</number>
+    <number>9</number>
    </property>
    <item>
     <widget class="QFrame" name="frame">
      <property name="maximumSize">
       <size>
-       <width>400</width>
+       <width>16777215</width>
        <height>16777215</height>
       </size>
      </property>
@@ -45,7 +45,7 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_7">
       <property name="spacing">
-       <number>3</number>
+       <number>9</number>
       </property>
       <property name="leftMargin">
        <number>0</number>
@@ -64,7 +64,7 @@
         <property name="maximumSize">
          <size>
           <width>16777215</width>
-          <height>130</height>
+          <height>320</height>
          </size>
         </property>
         <property name="font">
@@ -82,27 +82,34 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <property name="spacing">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="leftMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="topMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="rightMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="bottomMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <item>
           <widget class="QLabel" name="label">
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>20</height>
+             <height>50</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>13</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="frameShape">
             <enum>QFrame::Box</enum>
@@ -123,7 +130,7 @@
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>20</height>
+             <height>50</height>
             </size>
            </property>
            <property name="font">
@@ -157,6 +164,13 @@
             </property>
             <item>
              <widget class="QRadioButton" name="radioButton_record">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>Record</string>
               </property>
@@ -164,6 +178,13 @@
             </item>
             <item>
              <widget class="QRadioButton" name="radioButton_norecord">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
               <property name="text">
                <string>No Record</string>
               </property>
@@ -180,7 +201,7 @@
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>50</height>
+             <height>140</height>
             </size>
            </property>
            <property name="frameShape">
@@ -210,7 +231,7 @@
               <property name="maximumSize">
                <size>
                 <width>16777215</width>
-                <height>30</height>
+                <height>16777215</height>
                </size>
               </property>
               <property name="frameShape">
@@ -245,7 +266,7 @@
                  </property>
                  <property name="font">
                   <font>
-                   <pointsize>12</pointsize>
+                   <pointsize>13</pointsize>
                    <weight>50</weight>
                    <bold>false</bold>
                   </font>
@@ -263,7 +284,7 @@
               <property name="maximumSize">
                <size>
                 <width>16777215</width>
-                <height>30</height>
+                <height>16777215</height>
                </size>
               </property>
               <property name="frameShape">
@@ -292,7 +313,7 @@
                 <widget class="QPushButton" name="pushButton">
                  <property name="font">
                   <font>
-                   <pointsize>12</pointsize>
+                   <pointsize>13</pointsize>
                    <weight>50</weight>
                    <bold>false</bold>
                   </font>
@@ -306,7 +327,7 @@
                 <widget class="QPushButton" name="pushButton_3">
                  <property name="font">
                   <font>
-                   <pointsize>12</pointsize>
+                   <pointsize>13</pointsize>
                    <weight>50</weight>
                    <bold>false</bold>
                   </font>
@@ -327,7 +348,7 @@
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>30</height>
+             <height>60</height>
             </size>
            </property>
            <property name="frameShape">
@@ -440,7 +461,7 @@
         <property name="maximumSize">
          <size>
           <width>16777215</width>
-          <height>115</height>
+          <height>250</height>
          </size>
         </property>
         <property name="frameShape">
@@ -451,31 +472,31 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_9">
          <property name="spacing">
-          <number>0</number>
+          <number>9</number>
          </property>
          <property name="leftMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="topMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="rightMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="bottomMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <item>
           <widget class="QLabel" name="label_3">
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>20</height>
+             <height>50</height>
             </size>
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <pointsize>13</pointsize>
              <weight>75</weight>
              <bold>true</bold>
             </font>
@@ -499,8 +520,13 @@
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>80</height>
+             <height>180</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
            </property>
            <property name="frameShape">
             <enum>QFrame::NoFrame</enum>
@@ -552,7 +578,7 @@
                 <widget class="QLabel" name="label_informasi_2">
                  <property name="maximumSize">
                   <size>
-                   <width>150</width>
+                   <width>300</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -618,7 +644,7 @@
                 <widget class="QLabel" name="label_informasi_6">
                  <property name="maximumSize">
                   <size>
-                   <width>150</width>
+                   <width>300</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -684,7 +710,7 @@
                 <widget class="QLabel" name="label_informasi_10">
                  <property name="maximumSize">
                   <size>
-                   <width>150</width>
+                   <width>300</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -750,7 +776,7 @@
                 <widget class="QLabel" name="label_informasi_7">
                  <property name="maximumSize">
                   <size>
-                   <width>150</width>
+                   <width>300</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -816,7 +842,7 @@
                 <widget class="QLabel" name="label_informasi_8">
                  <property name="maximumSize">
                   <size>
-                   <width>150</width>
+                   <width>300</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -865,7 +891,7 @@
         <property name="maximumSize">
          <size>
           <width>16777215</width>
-          <height>180</height>
+          <height>800</height>
          </size>
         </property>
         <property name="frameShape">
@@ -876,31 +902,31 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_12">
          <property name="spacing">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="leftMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="topMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="rightMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="bottomMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <item>
           <widget class="QLabel" name="label_8">
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>20</height>
+             <height>50</height>
             </size>
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <pointsize>13</pointsize>
              <weight>75</weight>
              <bold>true</bold>
             </font>
@@ -939,31 +965,31 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <property name="spacing">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="leftMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="topMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="rightMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="bottomMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <item>
           <widget class="QLabel" name="label_4">
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>20</height>
+             <height>50</height>
             </size>
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <pointsize>13</pointsize>
              <weight>75</weight>
              <bold>true</bold>
             </font>
@@ -997,6 +1023,12 @@
    </item>
    <item>
     <widget class="QFrame" name="frame_2">
+     <property name="minimumSize">
+      <size>
+       <width>2300</width>
+       <height>0</height>
+      </size>
+     </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
      </property>
@@ -1005,7 +1037,7 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <property name="spacing">
-       <number>3</number>
+       <number>9</number>
       </property>
       <property name="leftMargin">
        <number>0</number>
@@ -1029,31 +1061,31 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
          <property name="spacing">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="leftMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="topMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="rightMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="bottomMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <item>
           <widget class="QLabel" name="label_7">
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>20</height>
+             <height>50</height>
             </size>
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <pointsize>13</pointsize>
              <weight>75</weight>
              <bold>true</bold>
             </font>
@@ -1087,8 +1119,13 @@
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>20</height>
+             <height>50</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
            </property>
            <property name="frameShape">
             <enum>QFrame::Box</enum>
@@ -1117,31 +1154,31 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_4">
          <property name="spacing">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="leftMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="topMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="rightMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <property name="bottomMargin">
-          <number>3</number>
+          <number>9</number>
          </property>
          <item>
           <widget class="QLabel" name="label_5">
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>20</height>
+             <height>50</height>
             </size>
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <pointsize>13</pointsize>
              <weight>75</weight>
              <bold>true</bold>
             </font>
