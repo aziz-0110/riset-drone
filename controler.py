@@ -74,7 +74,6 @@ class Controller:
         self.line_yellow = self.view.grafView.plot([], pen=pg.mkPen(255, 255, 0))
         self.line_green = self.view.grafView.plot([], [], pen=pg.mkPen(0, 255, 0))
 
-
         """CREATE VIDEO"""
         f_w = int(self.vid.get(cv2.CAP_PROP_FRAME_WIDTH))
         f_h = int(self.vid.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -242,8 +241,8 @@ def main():
     Controller(model, view)
 
     view.setWindowTitle('Detection of Grass')
-    # view.resize(2650, 1600)
-    view.resize(3500, 1600)
+    view.resize(1280, 720)
+    #view.resize(3500, 1600)
     view.show()
 
     sys.exit(app.exec_())

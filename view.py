@@ -12,13 +12,14 @@ class View(QtWidgets.QWidget):
 
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(2560, 1600)
+        Form.resize(1280, 720)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(Form)
         self.horizontalLayout_3.setContentsMargins(9, 9, 9, 9)
         self.horizontalLayout_3.setSpacing(9)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.frame = QtWidgets.QFrame(Form)
-        self.frame.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.frame.setMaximumSize(QtCore.QSize(1080, 16777215))
+        # self.frame.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.frame.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
@@ -363,6 +364,7 @@ class View(QtWidgets.QWidget):
         self.label_8.setObjectName("label_8")
         self.verticalLayout_12.addWidget(self.label_8)
 
+        """ Tabel """
         self.setupTabel()
 
         self.verticalLayout_12.addWidget(self.tableView)
@@ -408,7 +410,7 @@ class View(QtWidgets.QWidget):
 
         self.horizontalLayout_3.addWidget(self.frame)
         self.frame_2 = QtWidgets.QFrame(Form)
-        self.frame_2.setMinimumSize(QtCore.QSize(2300, 0))
+        self.frame_2.setMinimumSize(QtCore.QSize(700, 0))
         self.frame_2.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
